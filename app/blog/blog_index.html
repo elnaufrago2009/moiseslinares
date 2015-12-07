@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h1>Blog</h1>
+</div>
+
+<div class="row" ng-repeat="blog in blogs">
+    <div class="col-lg-2">
+        <img src="assets/img/42217994.jpg" class="img_tumb_blog img-responsive img-circle img-thumbnail">
+    </div>
+    <div class="col-lg-10">
+        <h3>
+            <a href="#blog_detalle">{{blog.title}}</a>            
+        </h3>
+        <p class="lead">
+            {{blog.description}}
+            <br>
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-edit"></span>
+                Leer Mas..
+            </button>
+        </p>
+    </div>
+</div>

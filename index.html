@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="weperu">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Weperu.com</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Js Assets -->
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/angular-route.js"></script>
+	<script src="assets/js/ui-bootstrap-tpls.js"></script>
+  <script src="assets/js/firebase.js"></script>
+  <script src="assets/js/angularfire.js"></script>
+
+	<!-- Js app -->
+	<script src="app/app.js"></script>
+	<script src="app/shared/menu_controller.js"></script>
+	<script src="app/home/home_controller.js"></script>
+	<script src="app/precios/precios_controller.js"></script>
+	<script src="app/blog/blog_controller.js"></script>
+	<script src="app/team/team_controller.js"></script>
+	<script src="app/portafolio/portafolio_controller.js"></script>
+
+</head>
+<body>
+
+
+	<!-- Menu -->
+	<nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">MoisesLinares.com</a>
+        </div>
+        <div class="navbar-collapse collapse" ng-controller="menuController">
+          <!-- Inicio menu izquierdo-->
+          <ul class="nav navbar-nav">
+              <li ng-class="{active: isActive('/blog')}">
+            	<a href="#blog">Blog</a>
+            </li>
+            <li ng-class="{active: isActive('/precios')}">
+            	<a href="#precios">Precios</a>
+            </li>            
+            <li ng-class="{active: isActive('/team')}">
+            	<a href="#team">Team</a>
+            </li>
+            <li ng-class="{active: isActive('/portafolio')}">
+            	<a href="#portafolio">Portafolio</a>
+            </li>
+
+          </ul> 
+
+          <!-- Inicio menu Derecho -->
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-show="login == false">
+              <a ng-class="{active:isActive('/sign_in')}" href="sign_in">
+                <span class="glyphicon glyphicon-user"></span> login
+              </a>
+            </li>
+          </ul>         
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- End Menu -->
+
+
+    <div class="container" ng-view></div>
+    
+    
+    <footer>
+        <div class="container">
+            <hr>
+            <div class="text-left">
+                By Abraham M. Linares O.
+            </div>
+            <br>
+        </div>
+    </footer>
+
+	
+</body>
+</html>
