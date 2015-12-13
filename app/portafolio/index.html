@@ -1,0 +1,21 @@
+<div class="page-header">
+	<h1>
+		Portafolio
+	</h1>
+</div>
+<table class="table table-condensed table-striped">
+	<tr>
+		<th>#id</th>
+		<th>Titulo</th>
+		<th>Acciones</th>
+	</tr>
+	<tr ng-repeat="(index, portafolio) in portafolios">
+		<td>{{index}} </td>
+		<td>{{portafolio.title}} </td>
+		<td>
+			<button class="btn btn-primary btn-xs" ng-click="openView(portafolio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Ver
+			</button>			
+		</td>
+	</tr>
+</table>

@@ -1,7 +1,30 @@
 <div class="page-header">
-    <h1>Blog Admin <button class="btn btn-default"> Nuevo</button></h1>
+    <h1>
+    	Blog Admin <button class="btn btn-default" ng-click="open()"><span class="glyphicon glyphicon-plus"></span>  Nuevo</button>
+    </h1>
 </div>
 
-<table class="table">
-    
+<table class="table table-striped">
+    <tr>
+    	<th>Id</th>
+    	<th>Titulo</th>
+    	<th>Categoria</th>
+    	<th>Acciones</th>
+    </tr>
+    <tr ng-repeat="(index, blog) in blogs">
+    	<td>{{index}}</td>
+    	<td>{{blog.title}}</td>
+    	<td>{{blog.categoria}}</td>
+    	<td>
+    		<button class="btn btn-default btn-xs" ng-click="openShow(blog)">
+    			<span class="glyphicon glyphicon-eye-open"></span> Ver
+    		</button>
+    		<button class="btn btn-default btn-xs" ng-click="openEdit(blog)">
+    			<span class="glyphicon glyphicon-edit"></span> Editar
+    		</button>
+    		<button class="btn btn-default btn-xs" ng-click="openDelete(blog,index)">
+    			<span class="glyphicon glyphicon-trash"></span> Eliminar
+    		</button>
+    	</td>
+    </tr>
 </table>

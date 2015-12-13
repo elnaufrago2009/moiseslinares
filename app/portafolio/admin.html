@@ -1,0 +1,32 @@
+<div class="page-header">
+	<h1>
+		Portafolio 
+		<button class='btn btn-default' ng-click="openNew()">
+			<span class="glyphicon glyphicon-plus"> Nuevo</span>
+		</button>
+	</h1>
+</div>
+<table class="table table-condensed table-striped">
+	<tr>
+		<th>#id</th>
+		<th>Titulo</th>
+		<th>Description</th>
+		<th>Acciones</th>
+	</tr>
+	<tr ng-repeat="(index, portafolio) in portafolios">
+		<td>{{index}} </td>
+		<td>{{portafolio.title}} </td>
+		<td>{{portafolio.description}} </td>
+		<td>
+			<button class="btn btn-primary btn-xs" ng-click="openView(portafolio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Ver
+			</button>
+			<button class="btn btn-success btn-xs" ng-click="openEdit(portafolio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Edit
+			</button>
+			<button class="btn btn-danger btn-xs" ng-click="openDelete(portafolio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Eliminar
+			</button>
+		</td>
+	</tr>
+</table>

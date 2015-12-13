@@ -1,0 +1,81 @@
+<div class="modal-header">
+	<h3 class="modal-title">
+		<span class="glyphicon glyphicon-plus"></span> 
+		Nuevo
+	</h3>
+</div>
+
+<div class="modal-body">
+	<form class="form-horizontal">
+		
+		<div class="form-group">
+			<label class="control-label col-lg-2">Title</label>
+			<div class="col-lg-3">
+				<input class="form-control" type="text" ng-model="portafolio.title">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-lg-2">Url</label>
+			<div class="col-lg-4">
+				<input class="form-control" type="text" ng-model="portafolio.url">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-lg-2">Img</label>
+			<div class="col-lg-5">
+				<input class="form-control" type="text" ng-model="portafolio.img">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-lg-2">Description</label>
+			<div class="col-lg-6">
+				<input class="form-control" type="text" ng-model="portafolio.description">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-lg-2">Content</label>
+			<div class="col-lg-3">
+				<input class="form-control" type="text" ng-model="portafolio.content">
+			</div>
+		</div>
+
+		<div class="form-group">
+	    	<label class="col-lg-2 control-label">Images</label>
+		    <div class="col-lg-7">
+		      	<button class="btn btn-default" ngf-select="agregar_fotos($files)" multiple accept="image/*" ><i class="fa fa-image"></i> Seleccionar</button>
+		      	<br>
+		      	<table class="table table-condensed">
+		      		<tr ng-repeat="foto in archivos">
+		      			<td>
+		      				<div class="progress" style="margin: 0px;">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{foto.progress}}%;">
+							    {{foto.name}} {{foto.progress}}%
+							  </div>
+							</div>
+		      			</td>
+		      			<td>
+		      				<button class="btn btn-default btn-xs" ng-click="eliminar_archivo($index)"><i class="fa fa-times"></i></button>		      				
+		      			</td>
+		      		</tr>		      		
+		      	</table>
+		    </div>
+	  	</div>
+
+
+	</form>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="add(portafolio)">
+		<span class="glyphicon glyphicon-save"></span>
+		Guardar
+	</button>
+	<button class="btn btn-warning" ng-click="cancel()">
+		<span class="glyphicon glyphicon-circle"></span> 
+		Cancelar
+	</button>
+</div>

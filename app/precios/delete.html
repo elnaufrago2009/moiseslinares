@@ -1,0 +1,21 @@
+<div class="modal-header">
+	<h3 class="modal-title">
+		<span class="glyphicon glyphicon-trash"></span> 
+		Eliminar
+	</h3>
+</div>
+
+<div class="modal-body">
+	<p class="lead">Esta seguro que deseas eliminar a : <strong> {{precio.title}} ?.</strong></p>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-danger" ng-click="delete(precio)">
+		<span class="glyphicon glyphicon-trash"></span>
+		Eliminar
+	</button>
+	<button class="btn btn-warning" ng-click="cancel()">
+		<span class="glyphicon glyphicon-circle"></span> 
+		Cancelar
+	</button>
+</div>

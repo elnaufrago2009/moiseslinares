@@ -15,15 +15,17 @@
 	<script src="assets/js/ui-bootstrap-tpls.js"></script>
   <script src="assets/js/firebase.js"></script>
   <script src="assets/js/angularfire.js"></script>
+  <script src="assets/js/ng-file-upload.js"></script>
 
 	<!-- Js app -->
 	<script src="app/app.js"></script>
 	<script src="app/shared/menu_controller.js"></script>
 	<script src="app/home/home_controller.js"></script>
-	<script src="app/precios/precios_controller.js"></script>
+	<script src="app/precios/controller.js"></script>
 	<script src="app/blog/blog_controller.js"></script>
-	<script src="app/team/team_controller.js"></script>
-	<script src="app/portafolio/portafolio_controller.js"></script>
+	<script src="app/cv/controller.js"></script>
+	<script src="app/portafolio/controller.js"></script>
+
 
 </head>
 <body>
@@ -39,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#/">MoisesLinares.com</a>
+          <a class="navbar-brand" href="#blog">MoisesLinares.com</a>
         </div>
         <div class="navbar-collapse collapse" ng-controller="menuController">
           <!-- Inicio menu izquierdo-->
@@ -50,8 +52,8 @@
             <li ng-class="{active: isActive('/precios')}">
             	<a href="#precios">Precios</a>
             </li>            
-            <li ng-class="{active: isActive('/team')}">
-            	<a href="#team">Team</a>
+            <li ng-class="{active: isActive('/cv')}">
+            	<a href="#cv">CV</a>
             </li>
             <li ng-class="{active: isActive('/portafolio')}">
             	<a href="#portafolio">Portafolio</a>
@@ -85,7 +87,6 @@
             <br>
         </div>
     </footer>
-
 	
 </body>
 </html>

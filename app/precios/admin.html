@@ -1,0 +1,30 @@
+<div class="page-header">
+	<h1>
+		Planes de Contruccion Web 
+		<button class='btn btn-default' ng-click="openNew()">
+			<span class="glyphicon glyphicon-plus"> Nuevo</span>
+		</button>
+	</h1>
+</div>
+<table class="table table-condensed table-striped">
+	<tr>
+		<th>#id</th>
+		<th>Titulo</th>
+		<th>Acciones</th>
+	</tr>
+	<tr ng-repeat="(index, precio) in precios">
+		<td>{{index}} </td>
+		<td>{{precio.title}} </td>
+		<td>
+			<button class="btn btn-primary btn-xs" ng-click="openShow(precio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Ver
+			</button>
+			<button class="btn btn-success btn-xs" ng-click="openEdit(precio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Edit
+			</button>
+			<button class="btn btn-danger btn-xs" ng-click="openDelete(precio)">
+				<span class='glyphicon glyphicon-eye-open'></span> Eliminar
+			</button>
+		</td>
+	</tr>
+</table>

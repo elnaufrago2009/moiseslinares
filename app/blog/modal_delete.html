@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h3 class="modal-title">
+    	<span class="glyphicon glyphicon-trash"></span> 
+    	Eliminar Blog
+    </h3>
+</div>
+<div class="modal-body">
+    <p class="lead">Estas Seguro que deseas eliminar Animal?: <strong>{{blog.title}}</strong>.</p>
+
+</div>
+<div class="modal-footer">    
+	<button class="btn btn-danger" type="button" ng-click="delete(index)">
+		<span class="glyphicon glyphicon-trash"></span> 
+		Eliminar
+	</button>
+    <button class="btn btn-warning" type="button" ng-click="cerrar()">Cerrar</button>
+</div>

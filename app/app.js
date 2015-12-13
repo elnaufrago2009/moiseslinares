@@ -1,4 +1,4 @@
-var app = angular.module("weperu", ['ngRoute','ui.bootstrap', 'firebase']);
+var app = angular.module("weperu", ['ngRoute','ui.bootstrap', 'firebase', 'ngFileUpload']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -8,8 +8,12 @@ app.config(function($routeProvider){
 		controller: "homeController"
 	})
 	.when('/precios', {
-		templateUrl: "app/precios/precios_index.html",
+		templateUrl: "app/precios/index.html",
 		controller: "preciosController"
+	})
+	.when('/precios_admin', {
+		templateUrl: "app/precios/admin.html",
+		controller: "preciosAdminController"
 	})
 	.when('/blog', {
 		templateUrl: "app/blog/blog_index.html",
@@ -23,13 +27,21 @@ app.config(function($routeProvider){
         templateUrl: "app/blog/blog_admin_index.html",
         controller: "blogAdminController"
     })
-	.when('/team', {
-		templateUrl: "app/team/team_index.html",
-		controller: "teamController"
+	.when('/cv', {
+		templateUrl: "app/cv/index.html",
+		controller: "cvController"
+	})
+	.when('/cv_admin', {
+		templateUrl: "app/cv/admin.html",
+		controller: "cvAdminController"
 	})
 	.when('/portafolio', {
-		templateUrl: "app/portafolio/portafolio_index.html",
-		controller: "portafolioController"
+		templateUrl: "app/portafolio/index.html",
+		controller: "portafoliosController"
+	})
+	.when('/portafolio_admin', {
+		templateUrl: "app/portafolio/admin.html",
+		controller: "portafoliosAdminController"
 	})
 	.otherwise({ redirectTo: '/' })
 });
